@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Конструктор</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<form class="form">
+    <fieldset class="sizes">
+        <p>
+            <b>Введите параметры:</b>
+            <button id="openButton" type="submit" class="submit-button">Помощь в замерах</button>
+        </p>
+
+        <div class="param">
+            <ul class="type">Длина спины от ошейника до основания хвоста</ul>
+            <ul class="size"><input type="number" size="2" name="ОН" min="1" max="300" value="36"></ul>
+        </div>
+        <div class="param">
+            <ul class="type">Высота в холке</ul>
+            <ul class="size"><input type="number" size="2" name="ОВ" min="1" max="300" value="35"></ul>
+        </div>
+        <div class="param">
+            <ul class="type">Расстояние от ошейника спереди до линии пола</ul>
+            <ul class="size"><input type="number" size="2" name="Г" min="1" max="300" value="23"></ul>
+        </div>
+        <div class="param">
+            <ul class="type">Ширина груди</ul>
+            <ul class="size"><input type="number" size="2" name="Шг" min="1" max="300" value="18"></ul>
+        </div>
+        <div class="param">
+            <ul class="type">Ширина между передними лапами</ul>
+            <ul class="size"><input type="number" size="2" name="Шпл" min="1" max="300" value="11"></ul>
+        </div>
+        <div class="param">
+            <ul class="type">Обхват груди</ul>
+            <ul class="size"><input type="number" size="2" name="Ог" min="1" max="300" value="49"></ul>
+        </div>
+        <div class="param">
+            <ul class="type">Расстояние от ошейника до линии начала передней лапы</ul>
+            <ul class="size"><input type="number" size="2" name="ПО" min="1" max="300" value="10"></ul>
+        </div>
+        <div class="param">
+            <ul class="type">Обхват талии</ul>
+            <ul class="size"><input type="number" size="2" name="От" min="1" max="300" value="41"></ul>
+        </div>
+        <div class="param">
+            <ul class="type">Расстояние от пола вверх до основания хвоста</ul>
+            <ul class="size"><input type="number" size="2" name="Н1М1" min="1" max="300" value="31"></ul>
+        </div>
+        <div class="param">
+            <ul class="type">Обхват запястья передней лапы</ul>
+            <ul class="size"><input type="number" size="2" name="ЗЗ1" min="1" max="300" value="9"></ul>
+        </div>
+        <div class="param">
+            <ul class="type">Расстояние от ошейника до лба</ul>
+            <ul class="size"><input type="number" size="2" name="РОЛ" min="1" max="300" value="35"></ul>
+        </div>
+        <div class="hood">
+            <input type="checkbox"> Наличие капюшона
+        </div>
+        <div class="wings">
+            <input type="checkbox"> Наличие крыльев
+            <label class="param-2">
+                <span class="label-text">Тип крыла</span>
+                <select>
+                    <option value="demon">Демоненок</option>
+                    <option value="angel" selected>Ангелок</option>
+                </select>
+            </label>
+            <div class="param-2">
+                <ul class="type">Ширина крыла</ul>
+                <ul class="size"><input type="number" size="2" name="ШКР" min="1" max="300" value="30"></ul>
+            </div>
+            <div class="param-2">
+                <ul class="type">Высота крыла</ul>
+                <ul class="size"><input type="number" size="2" name="ВКР" min="1" max="300" value="15"></ul>
+            </div>
+        </div>
+        <div class="pocket">
+            <input type="checkbox"> Наличие кармана
+            <div class="param-2">
+                <ul class="type">Ширина кармана</ul>
+                <ul class="size"><input type="number" size="2" name="ШК" min="1" max="300" value="9"></ul>
+            </div>
+            <div class="param-2">
+                <ul class="type">Высота кармана</ul>
+                <ul class="size"><input type="number" size="2" name="ВК" min="1" max="300" value="9"></ul>
+            </div>
+        </div>
+        <button type="button" class="button-pain">Чертить</button>
+        <button type="button" class="button-dow">Скачать</button>
+    </fieldset>
+    <canvas class="painting" width="600" height="6000"></canvas>
+
+    <div id="modalWindow" class="modal">
+        <div class="modal-content">
+            <img class="help-img" src="vikroika.png">
+            <span id="closeButton" class="close">&times;</span>
+        </div>
+    </div>
+</form>
+<script src="index.js"></script>
+</body>
+</html>
